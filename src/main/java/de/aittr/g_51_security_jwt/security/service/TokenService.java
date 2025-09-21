@@ -58,7 +58,7 @@ public class TokenService {
 
     //валидация токенов
     public boolean validateAccessToken(String accessToken) {
-        return validateToken(accessToken, refreshKey);
+        return validateToken(accessToken, accessKey);
     }
 
     public boolean validateRefreshToken(String refreshToken) {
