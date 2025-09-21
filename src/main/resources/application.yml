@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: g_51_security_jwt
+  datasource:
+    url: jdbc:postgresql://localhost:5433/g51_jwt
+    username: my_user
+    password: pos1234
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  jpa:
+    properties:
+      hibernate:
+        auto_quote_keyword: true
+
+key:
+  access: 2krEIxvIuS1Y4DK0KRcGLfFTB4TlzWjUzgu2OQAxMdU=
+  refresh: JT/32X4ReZWAeDUNqS209LbfGPvcYTkN4jRbXdpN7og=
