@@ -33,7 +33,7 @@ public class TokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String accessToken = tokenService.getTokenFromRequest(request, "Access-Token");
-        System.out.println(accessToken);
+
         if (accessToken != null && tokenService.validateAccessToken(accessToken)) {
             Claims claims = tokenService.getAccessClaims(accessToken);
             String username = claims.getSubject();
